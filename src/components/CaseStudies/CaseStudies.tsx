@@ -131,7 +131,10 @@ const CaseStudies: React.FC = () => {
                   >
                     <div className={styles.thumbnail}>
                       <video
-                        ref={el => thumbnailRefs.current[index] = el}
+                        ref={(el: HTMLVideoElement | null) => {
+                        // This function body now explicitly returns 'void'
+                        thumbnailRefs.current[index] = el;
+                        }}
                         src={video.src}
                         preload="metadata"
                         muted
