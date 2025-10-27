@@ -1,0 +1,111 @@
+.services {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid #f7fafc;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.iconWrapper {
+  color: #e53e3e;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 700; /* Montserrat 700 */
+  color: #1a202c;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.serviceDescription {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400; /* Montserrat 400 */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ctaSection {
+  text-align: center;
+}
+
+.ctaButton {
+  background: #e53e3e;
+  color: white;
+  padding: 1.25rem 3rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600; /* Montserrat 600 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(229, 62, 62, 0.3);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ctaButton:hover {
+  background: #c53030;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(229, 62, 62, 0.4);
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .serviceCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaButton {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+}

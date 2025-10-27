@@ -1,0 +1,76 @@
+.valueProp {
+  padding: 5rem 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.valueProp::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-image: url('../../assets/images/flower-pattern.png');
+  background-size: 300px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700; /* Montserrat 700 */
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.blackText {
+  color: #1a202c;
+}
+
+.redText {
+  color: #e53e3e;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #718096;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  font-weight: 400; /* Montserrat 400 */
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .valueProp {
+    padding: 4rem 0;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
